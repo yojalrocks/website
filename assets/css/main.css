@@ -531,7 +531,7 @@ section {
 
 .hero h2 {
   margin: 0;
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
@@ -1051,6 +1051,7 @@ section {
 
 .services-cards .card-item {
   border: 1px solid rgba(27, 47, 69, 0.1);
+  border-top: 8px solid rgba(27, 47, 69, 0.3);
   background: #fff;
   position: relative;
   border-radius: 0;
