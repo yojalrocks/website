@@ -1,0 +1,15 @@
+{
+    "dir": "ltr",
+    "lang": "en-us",
+    "name": "yagarwalca.in",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "/",
+    "short_name": "yagarwalca.in",
+    "description": "CA Firm",
+    "orientation": "any",
+    "theme_color": "#56b8e6",
+    "background_color": "#fff",
+    "related_applications": [],
+    "prefer_related_applications": false
+}

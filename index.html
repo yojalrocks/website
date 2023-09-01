@@ -36,7 +36,7 @@
       rel="stylesheet"
     />
     <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css"
       rel="stylesheet"
     />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
@@ -670,5 +670,18 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    
+    <!-- Load JFA PWA Toolkit Configs -->
+    <script type="text/javascript" src="/pwa/config.js"></script>
+
+    <!-- Load JFA PWA Toolkit Lib -->
+    <script type="text/javascript" src="/pwa/pwa.js"></script>
+
+    <!-- Register principal Service Worker -->
+    <script type="text/javascript">
+        console.log('testsing');
+        
+        PWA.ServiceWorker.register();
+    </script>
   </body>
 </html>

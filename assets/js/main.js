@@ -190,3 +190,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+
+// if (navigator && navigator.serviceWorker) {
+//   navigator.serviceWorker.register('assets/js/sw.js');
+// }
