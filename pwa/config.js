@@ -26,7 +26,7 @@ const PWA_CONFIG = {
             // Entries used the least will be removed as the maximum is reached.
             maxentries: 500,
             // The maximum age of an entry before it's treated as stale and removed.
-            maxageseconds: 365 * 24 * 60 * 60,
+            maxageseconds: 7 * 24 * 60 * 60,
         },
         // Static files cache config (js|json|css)
         statics: {
@@ -36,7 +36,7 @@ const PWA_CONFIG = {
             // Entries used the least will be removed as the maximum is reached.
             maxentries: 500,
             // The maximum age of an entry before it's treated as stale and removed.
-            maxageseconds: 365 * 24 * 60 * 60,
+            maxageseconds: 7 * 24 * 60 * 60,
         },
         // Fonts cache config (eot|ttf|woff|woff2|otf)
         // with cross-origin requests example google fonts
@@ -47,7 +47,7 @@ const PWA_CONFIG = {
             // Entries used the least will be removed as the maximum is reached.
             maxentries: 500,
             // The maximum age of an entry before it's treated as stale and removed.
-            maxageseconds: 365 * 24 * 60 * 60,
+            maxageseconds: 7 * 24 * 60 * 60,
         },
         routes: {
             // Force the response to come from the network
@@ -75,7 +75,7 @@ const PWA_CONFIG = {
                 active: false,
                 // regex: /.*/,
                 // maxentries: 500,
-                // maxageseconds: 365 * 24 * 60 * 60,
+                // maxageseconds: 7 * 24 * 60 * 60,
             },
             // Force the response to come from the browser.
             cacheonly: {
