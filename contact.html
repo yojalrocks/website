@@ -15,6 +15,53 @@
 
       gtag("config", "G-WN2B8N0CQT");
     </script>
+
+    <!-- form submission -->
+    <script>
+      // const CW_url = "https://cloud-worker.yojalagarval.workers.dev";
+      const CW_url = "http://localhost:8787";
+      function validateForm(e) {
+        e.preventDefault();
+        const formControls = e.currentTarget.elements;
+        const formData = {};
+        for (let i = 0; i < formControls.length; i++) {
+          const element = formControls[i];
+          // Skip buttons and other non-data elements
+          if (element.type !== "submit" && element.type !== "button") {
+            formData[element.id] = element.value;
+          }
+        }
+
+        console.log(formData);
+
+        fetch(CW_url + "/newLead", {
+          method: "POST",
+          body: JSON.stringify(formData),
+          // add no cors headers
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response)
+          .then((data) => {
+            console.log("Success:", data);
+            setSuccessMessage(
+              "Thank you for reaching out! We'll get back to you soon."
+            );
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            setSuccessMessage(
+              "There was an error submitting your message. Please try again later."
+            );
+          });
+        // setSuccessMessage(
+        //   "Thank you for reaching out! We'll get back to you soon."
+        // );
+      }
+    </script>
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -189,7 +236,7 @@
 
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
               <form
-                action="https://docs.google.com/forms/d/e/1FAIpQLSfBh2MOacJ7RQStnlN5zTS-ekX9SvmwqiKf0KTmg4WJQAlmaA/ "
+                onsubmit="validateForm(event)"
                 method="post"
                 role="form"
                 class="php-email-form"
@@ -231,6 +278,7 @@
                     class="form-control"
                     name="entry.313142472"
                     rows="5"
+                    id="message"
                     placeholder="Message"
                     required
                   ></textarea>
